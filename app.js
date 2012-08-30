@@ -1,19 +1,19 @@
 var zlib = require('zlib');
 var fs = require('fs');
 
+fd = 'r.0.-1.mca'
 
-/*
-fs.readFile('r.0.0.mca', 'utf8', function (err, data) {
-  if (err) throw err;
-  console.log(data);
-});
-*/
+fs.readFile(fd,function(e,b){
+     var d;
+	for(x = 0; x<=b.length-1; x++){
+	d += b[x].toString()
+	}
+	
+	console.log(d);
+	//console.log(b.length)
+})
+//32760
 
-var x = zlib.createInflateRaw({'windowBits':8})
 
 
-for (y in x){
-	console.log(x);
-}
 
-console.log(x._offset);
